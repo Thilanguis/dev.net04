@@ -22,5 +22,24 @@ namespace Projeto1.Repositories
             Command.ExecuteNonQuery();
         }
 
+        public void Atualizar(Setor setor)
+        {
+            string query = "update Setor ser Nome = @Nome where IdSetor = @idSetor";
+
+            Command = new SqlCommand(query, Connection);
+            Command.Parameters.AddWithValue("@Nome", setor.Nome);
+            Command.Parameters.AddWithValue("@IdSetor", setor.IdSetor);
+            Command.ExecuteNonQuery();
+        }
+
+        public void Excluir(int idSetor)
+        {
+            string query = "delete from Setor where IdSetor = @Idsetor";
+
+            Command = new SqlCommand(query, Connection);
+            Command.Parameters.AddWithValue("@IdSetor", idSetor);
+            Command.ExecuteNonQuery();
+        }
+
     }
 }
