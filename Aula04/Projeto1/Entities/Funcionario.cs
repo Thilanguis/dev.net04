@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Projeto01.Entities
 {
-    class Funcionario
+    public class Funcionario
     {
         public int IdFuncionario { get; set; }
         public string Nome { get; set; }
