@@ -14,11 +14,13 @@ namespace Projeto01.Entities
         //Relacionamento de Associação (ter-1)
         public Setor Setor { get; set; }
 
+        // construtor default
         public Funcionario()
         {
 
         }
 
+        //overload
         public Funcionario(int idFuncionario, string nome, decimal salario, DateTime dataAdmissao)
         {
             IdFuncionario = idFuncionario;

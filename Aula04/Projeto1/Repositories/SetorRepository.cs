@@ -24,7 +24,7 @@ namespace Projeto1.Repositories
 
         public void Atualizar(Setor setor)
         {
-            string query = "update Setor ser Nome = @Nome where IdSetor = @idSetor";
+            string query = "update Setor set Nome = @Nome where IdSetor = @idSetor";
 
             Command = new SqlCommand(query, Connection);
             Command.Parameters.AddWithValue("@Nome", setor.Nome);
